@@ -16,7 +16,7 @@ class ScoreController extends Controller
     }
 
     public function firstTen(){
-        return new ScoreCollection(Score::orderBy('score', 'desc')->take(10)->get);
+        return new ScoreCollection(Score::orderBy('score', 'desc')->take(10)->get());
     }
 
     public function store(Request $request)
